@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Profile</title>
+</head>
+
+<body class="bg-black text-white flex flex-col min-h-screen">
+
+    <!-- Header Section (Navbar for Larger Screens & Hamburger Menu for Mobile) -->
+    <header class="bg-black text-white py-4">
+        <div class="container mx-auto flex justify-between items-center relative">
+            <!-- Logo / Title -->
+            <a href="index.html">
+                <img src="Download DB Logo Letter Monogram Slash with Modern logo designs template for free.jpeg" alt=""
+                    class="h-24 w-24 -mt-6 ">
+            </a>
+
+            <!-- Navbar for Larger Screens -->
+            <nav class="hidden md:flex space-x-4 md:-mt-8">
+                <a href="index.html" class="text-lg hover:underline">Home</a>
+                <a href="profile.html" class="text-lg hover:underline">Profile</a>
+                <a href="contact.html" class="text-lg hover:underline">Contact</a>
+            </nav>
+
+            <!-- Hamburger Menu for Mobile -->
+            <button id="menu-button" class="relative z-50 flex flex-col justify-center items-center md:hidden -mt-8"
+                aria-label="Toggle menu">
+                <span class="block h-0.5 w-6 bg-white transition-transform duration-300"></span>
+                <span class="block h-0.5 w-6 bg-white mt-1 transition-opacity duration-300"></span>
+                <span class="block h-0.5 w-6 bg-white mt-1 transition-transform duration-300"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu"
+        class="fixed top-0 right-0 h-full w-64 bg-transparent shadow-md transform transition-transform duration-300 z-40 translate-x-full">
+        <ul class="flex flex-col space-y-4 p-4 bg-transparent ">
+            <li><a href="index.html"
+                    class="block px-4 py-2 rounded text-white hover:text-cyan-700 hover:bg-gray-100">Home</a></li>
+            <li><a href="profile.html"
+                    class="block px-4 py-2 rounded text-white hover:text-cyan-700 hover:bg-gray-100">Profile</a>
+            </li>
+            <li><a href="contact.html"
+                    class="block px-4 py-2 rounded text-white hover:text-cyan-700 hover:bg-gray-100">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section (Centered Content) -->
+    <div class="flex flex-1 justify-center items-start md:items-start bg-transparent pt-12">
+        <!-- Added pt-12 for a slight move upwards on mobile -->
+        <div class="text-center md:text-left">
+            <h1 class="text-4xl md:text-7xl font-bold mb-4">I'm your daddy</h1>
+            <p class="text-xl text-center">Now go read the blogs</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-black text-white py-4 text-center mt-auto">
+        <p class="text-lg">Daddy Blogs &copy; 2024</p>
+    </footer>
+
+    <script>
+        // Function to toggle the mobile menu visibility when hamburger button is clicked
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            // Toggle the mobile menu's transform property to slide in/out
+            mobileMenu.classList.toggle('translate-x-full');
+            mobileMenu.classList.toggle('translate-x-0');
+        });
+
+        // Function to close the menu when a link is clicked
+        function closeMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
+        }
+    </script>
+</body>
+
+</html>
