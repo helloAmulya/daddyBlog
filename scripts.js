@@ -6,7 +6,7 @@ document.getElementById('blogForm').addEventListener('submit', async function (e
     const author = document.getElementById('author').value;
   
     try {
-      const response = await fetch('http://localhost:3000/api/blogs', {
+      const response = await fetch('https://blog-blackend.vercel.app/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
