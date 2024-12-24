@@ -6,7 +6,7 @@ document.getElementById('blogForm').addEventListener('submit', async function (e
     const author = document.getElementById('author').value;
   
     try {
-      const response = await fetch('https://blog-blackend.vercel.app/', {
+      const response = await fetch('https://blog-backend-two-lyart.vercel.app/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

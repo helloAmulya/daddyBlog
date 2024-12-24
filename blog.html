@@ -43,7 +43,8 @@
             <li><a href="profile.html"
                     class="block px-4 py-2 rounded text-white hover:text-cyan-700 hover:bg-gray-100">Profile</a>
             </li>
-            <li><a href="contact.html" class="block px-4 py-2 rounded text-white hover:text-cyan-700 hover:bg-gray-100">Contact</a>
+            <li><a href="contact.html"
+                    class="block px-4 py-2 rounded text-white hover:text-cyan-700 hover:bg-gray-100">Contact</a>
             </li>
         </ul>
     </nav>
@@ -91,7 +92,7 @@
             }
 
             try {
-                const response = await fetch(`https://blog-blackend.vercel.app/api/blogs/${blogId}`);
+                const response = await fetch(`'https://blog-backend-two-lyart.vercel.app/api/blogs/${blogId}`);
 
                 if (!response.ok) {
                     document.getElementById('blogContent').innerHTML = `
