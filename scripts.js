@@ -6,7 +6,7 @@ document.getElementById('blogForm').addEventListener('submit', async function (e
   const author = document.getElementById('author').value;
 
   try {
-    const response = await fetch('https://rndblog.vercel.app/api/blogs', {
+    const response = await fetch('https://rndblog1.vercel.app/api/blogs', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, content, author }),
