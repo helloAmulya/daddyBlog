@@ -7,18 +7,17 @@ document.getElementById('blogForm').addEventListener('submit', async function (e
 
   try {
     const response = await fetch('https://rndblog.vercel.app/api/blogs', {
-
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, content, author }),
     });
 
+    const result = await response.json();
     if (response.ok) {
       alert('Blog posted successfully!');
       document.getElementById('blogForm').reset();
     } else {
+      console.error('Error response:', result);
       alert('Error posting blog. Please try again.');
     }
   } catch (err) {
